@@ -5,7 +5,7 @@
 
   
 
-Welcome to the Agentforce Workshop! This workshop was created for Midwest Dreamin 25, you can check the presentation here:
+Welcome to the Agentforce Workshop! This workshop was created for Midwest Dreamin 25, you can check the presentation [here](deck/MWD25%20-%20Extend%20Agentforce%20with%20Custom%20Actions.pdf).
 
   
 
@@ -427,7 +427,7 @@ Here’s an image of the Flow you will recreate:
 
   
 
-![Briefly - Create Story - Flow](images\Briefly - Create Story - Flow.png)
+![Briefly - Create Story - Flow](images/Briefly%20-%20Create%20Story%20-%20Flow.png)
 
   
 
@@ -451,7 +451,7 @@ Add the following elements to your flow and copy the screenshots for configurati
 
   
 
-![Briefly - Create Story - Flow](images\Briefly - Create Story - Flow - 1.png)
+![Briefly - Create Story - Flow](images/Briefly%20-%20Create%20Story%20-%20Flow%20-%201.png)
 
   
 
@@ -463,7 +463,7 @@ Add the following elements to your flow and copy the screenshots for configurati
 
   
 
-![Briefly - Create Story - Flow](images\Briefly - Create Story - Flow - 2.png)
+![Briefly - Create Story - Flow](images/Briefly%20-%20Create%20Story%20-%20Flow%20-%202.png)
 
   
 
@@ -475,7 +475,7 @@ Add the following elements to your flow and copy the screenshots for configurati
 
   
 
-![Briefly - Create Story - Flow](images\Briefly - Create Story - Flow - 3.png)
+![Briefly - Create Story - Flow](images/Briefly%20-%20Create%20Story%20-%20Flow%20-%203.png)
 
   
 
@@ -487,7 +487,7 @@ Add the following elements to your flow and copy the screenshots for configurati
 
   
 
-![Briefly - Create Story - Flow](images\Briefly - Create Story - Flow - 4.png)
+![Briefly - Create Story - Flow](images/Briefly%20-%20Create%20Story%20-%20Flow%20-%204.png)
 
   
 
@@ -499,7 +499,7 @@ Add the following elements to your flow and copy the screenshots for configurati
 
   
 
-![Briefly - Create Story - Flow](images\Briefly - Create Story - Flow - 5.png)
+![Briefly - Create Story - Flow](images/Briefly%20-%20Create%20Story%20-%20Flow%20-%205.png)
 
   
 
@@ -511,7 +511,7 @@ Add the following elements to your flow and copy the screenshots for configurati
 
   
 
-![Briefly - Create Story - Flow](images\Briefly - Create Story - Flow - 6.png)
+![Briefly - Create Story - Flow](images/Briefly%20-%20Create%20Story%20-%20Flow%20-%206.png)
 
   
 
@@ -523,7 +523,7 @@ Add the following elements to your flow and copy the screenshots for configurati
 
   
 
-![Briefly - Create Story - Flow](images\Briefly - Create Story - Flow - 7.png)
+![Briefly - Create Story - Flow](images/Briefly%20-%20Create%20Story%20-%20Flow%20-%207.png)
 
   
 
@@ -543,7 +543,7 @@ Add the following elements to your flow and copy the screenshots for configurati
 
   
 
-## Level 4 - Creating an Apex Custom Action (5 minutes)
+## Level 4 - Creating an Apex Custom Action (10 minutes)
 
   
 
