@@ -1,0 +1,241 @@
+{
+    "name": "Integration Webhooks, Google Docs",
+    "flow": [
+        {
+            "id": 1,
+            "module": "gateway:CustomWebHook",
+            "version": 1,
+            "parameters": {
+                "hook": 745161,
+                "maxResults": 1
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "hook": {
+                            "data": {
+                                "editable": "true"
+                            },
+                            "label": "My gateway-webhook webhook"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "hook",
+                        "type": "hook:gateway-webhook",
+                        "label": "Webhook",
+                        "required": true
+                    },
+                    {
+                        "name": "maxResults",
+                        "type": "number",
+                        "label": "Maximum number of results"
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "ProjectName",
+                        "type": "text"
+                    },
+                    {
+                        "name": "Content",
+                        "type": "text"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "module": "google-docs:createADocument",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 3148299
+            },
+            "mapper": {
+                "name": "{{1.ProjectName}}-playbook",
+                "footer": false,
+                "header": false,
+                "content": "<html>\n\n<head>\n    <meta content=\"text/html; charset=UTF-8\" http-equiv=\"content-type\">\n    <style type=\"text/css\">\n        @import url(https://themes.googleusercontent.com/fonts/css?kit=fpjTOVmNbO4Lz34iLyptLcf-5JS7Pt-XEl3ieo8uMtisaQnAMaQTej6fzumLTPTJGDt9_iYoJB-VVF7ZDKH-yQehg7PtNcYqIz7hZpgHt5I);\n\n        ol {\n            margin: 0;\n            padding: 0\n        }\n\n        table td,\n        table th {\n            padding: 0\n        }\n\n        .c41 {\n            border-right-style: solid;\n            padding: 0pt 5.4pt 0pt 5.4pt;\n            border-bottom-color: #666666;\n            border-top-width: 1pt;\n            border-right-width: 1pt;\n            border-left-color: #999999;\n            vertical-align: top;\n            border-right-color: #999999;\n            border-left-width: 1pt;\n            border-top-style: solid;\n            background-color: #595959;\n            border-left-style: solid;\n            border-bottom-width: 1.5pt;\n            width: 224.3pt;\n            border-top-color: #999999;\n            border-bottom-style: solid\n        }\n\n        .c37 {\n            border-right-style: solid;\n            padding: 0pt 5.4pt 0pt 5.4pt;\n            border-bottom-color: #666666;\n            border-top-width: 1pt;\n            border-right-width: 1pt;\n            border-left-color: #999999;\n            vertical-align: top;\n            border-right-color: #999999;\n            border-left-width: 1pt;\n            border-top-style: solid;\n            background-color: #595959;\n            border-left-style: solid;\n            border-bottom-width: 1.5pt;\n            width: 25.1pt;\n            border-top-color: #999999;\n            border-bottom-style: solid\n        }\n\n        .c47 {\n            border-right-style: solid;\n            padding: 0pt 5.4pt 0pt 5.4pt;\n            border-bottom-color: #666666;\n            border-top-width: 1pt;\n            border-right-width: 1pt;\n            border-left-color: #999999;\n            vertical-align: top;\n            border-right-color: #999999;\n            border-left-width: 1pt;\n            border-top-style: solid;\n            background-color: #595959;\n            border-left-style: solid;\n            border-bottom-width: 1.5pt;\n            width: 61pt;\n            border-top-color: #999999;\n            border-bottom-style: solid\n        }\n\n        .c21 {\n            border-right-style: solid;\n            padding: 0pt 5.4pt 0pt 5.4pt;\n            border-bottom-color: #666666;\n            border-top-width: 1pt;\n            border-right-width: 1pt;\n            border-left-color: #999999;\n            vertical-align: top;\n            border-right-color: #999999;\n            border-left-width: 1pt;\n            border-top-style: solid;\n            background-color: #595959;\n            border-left-style: solid;\n            border-bottom-width: 1.5pt;\n            width: 98pt;\n            border-top-color: #999999;\n            border-bottom-style: solid\n        }\n\n        .c19 {\n            border-right-style: solid;\n            padding: 0pt 5.4pt 0pt 5.4pt;\n            border-bottom-color: #666666;\n            border-top-width: 1pt;\n            border-right-width: 1pt;\n            border-left-color: #999999;\n            vertical-align: top;\n            border-right-color: #999999;\n            border-left-width: 1pt;\n            border-top-style: solid;\n            background-color: #595959;\n            border-left-style: solid;\n            border-bottom-width: 1.5pt;\n            width: 59pt;\n            border-top-color: #999999;\n            border-bottom-style: solid\n        }\n\n        .c45 {\n            border-right-style: solid;\n            padding: 0pt 5.4pt 0pt 5.4pt;\n            border-bottom-color: #999999;\n            border-top-width: 1pt;\n            border-right-width: 1pt;\n            border-left-color: #999999;\n            vertical-align: top;\n            border-right-color: #999999;\n            border-left-width: 1pt;\n            border-top-style: solid;\n            border-left-style: solid;\n            border-bottom-width: 1pt;\n            width: 25.1pt;\n            border-top-color: #999999;\n            border-bottom-style: solid\n        }\n\n        .c2 {\n            border-right-style: solid;\n            padding: 0pt 5.4pt 0pt 5.4pt;\n            border-bottom-color: #999999;\n            border-top-width: 1.5pt;\n            border-right-width: 1pt;\n            border-left-color: #999999;\n            vertical-align: top;\n            border-right-color: #999999;\n            border-left-width: 1pt;\n            border-top-style: solid;\n            border-left-style: solid;\n            border-bottom-width: 1pt;\n            width: 25.1pt;\n            border-top-color: #666666;\n            border-bottom-style: solid\n        }\n\n        .c42 {\n            border-right-style: solid;\n            padding: 0pt 5.4pt 0pt 5.4pt;\n            border-bottom-color: #999999;\n            border-top-width: 1.5pt;\n            border-right-width: 1pt;\n            border-left-color: #999999;\n            vertical-align: top;\n            border-right-color: #999999;\n            border-left-width: 1pt;\n            border-top-style: solid;\n            border-left-style: solid;\n            border-bottom-width: 1pt;\n            width: 61pt;\n            border-top-color: #666666;\n            border-bottom-style: solid\n        }\n\n        .c32 {\n            border-right-style: solid;\n            padding: 5pt 5pt 5pt 5pt;\n            border-bottom-color: #000000;\n            border-top-width: 1pt;\n            border-right-width: 1pt;\n            border-left-color: #000000;\n            vertical-align: top;\n            border-right-color: #000000;\n            border-left-width: 1pt;\n            border-top-style: solid;\n            border-left-style: solid;\n            border-bottom-width: 1pt;\n            width: 51pt;\n            border-top-color: #000000;\n            border-bottom-style: solid\n        }\n\n        .c39 {\n            border-right-style: solid;\n            padding: 0pt 5.4pt 0pt 5.4pt;\n            border-bottom-color: #999999;\n            border-top-width: 1pt;\n            border-right-width: 1pt;\n            border-left-color: #999999;\n            vertical-align: top;\n            border-right-color: #999999;\n            border-left-width: 1pt;\n            border-top-style: solid;\n            border-left-style: solid;\n            border-bottom-width: 1pt;\n            width: 61pt;\n            border-top-color: #999999;\n            border-bottom-style: solid\n        }\n\n        .c36 {\n            border-right-style: solid;\n            padding: 5pt 5pt 5pt 5pt;\n            border-bottom-color: #000000;\n            border-top-width: 1pt;\n            border-right-width: 1pt;\n            border-left-color: #000000;\n            vertical-align: top;\n            border-right-color: #000000;\n            border-left-width: 1pt;\n            border-top-style: solid;\n            border-left-style: solid;\n            border-bottom-width: 1pt;\n            width: 99pt;\n            border-top-color: #000000;\n            border-bottom-style: solid\n        }\n\n        .c14 {\n            border-right-style: solid;\n            padding: 5pt 5pt 5pt 5pt;\n            border-bottom-color: #000000;\n            border-top-width: 1pt;\n            border-right-width: 1pt;\n            border-left-color: #000000;\n            vertical-align: top;\n            border-right-color: #000000;\n            border-left-width: 1pt;\n            border-top-style: solid;\n            border-left-style: solid;\n            border-bottom-width: 1pt;\n            width: 93.6pt;\n            border-top-color: #000000;\n            border-bottom-style: solid\n        }\n\n        .c46 {\n            border-right-style: solid;\n            padding: 0pt 5.4pt 0pt 5.4pt;\n            border-bottom-color: #999999;\n            border-top-width: 1pt;\n            border-right-width: 1pt;\n            border-left-color: #999999;\n            vertical-align: top;\n            border-right-color: #999999;\n            border-left-width: 1pt;\n            border-top-style: solid;\n            border-left-style: solid;\n            border-bottom-width: 1pt;\n            width: 59pt;\n            border-top-color: #999999;\n            border-bottom-style: solid\n        }\n\n        .c44 {\n            border-right-style: solid;\n            padding: 0pt 5.4pt 0pt 5.4pt;\n            border-bottom-color: #999999;\n            border-top-width: 1pt;\n            border-right-width: 1pt;\n            border-left-color: #999999;\n            vertical-align: top;\n            border-right-color: #999999;\n            border-left-width: 1pt;\n            border-top-style: solid;\n            border-left-style: solid;\n            border-bottom-width: 1pt;\n            width: 224.3pt;\n            border-top-color: #999999;\n            border-bottom-style: solid\n        }\n\n        .c33 {\n            border-right-style: solid;\n            padding: 5pt 5pt 5pt 5pt;\n            border-bottom-color: #000000;\n            border-top-width: 1pt;\n            border-right-width: 1pt;\n            border-left-color: #000000;\n            vertical-align: top;\n            border-right-color: #000000;\n            border-left-width: 1pt;\n            border-top-style: solid;\n            border-left-style: solid;\n            border-bottom-width: 1pt;\n            width: 147.8pt;\n            border-top-color: #000000;\n            border-bottom-style: solid\n        }\n\n        .c30 {\n            border-right-style: solid;\n            padding: 5pt 5pt 5pt 5pt;\n            border-bottom-color: #000000;\n            border-top-width: 1pt;\n            border-right-width: 1pt;\n            border-left-color: #000000;\n            vertical-align: top;\n            border-right-color: #000000;\n            border-left-width: 1pt;\n            border-top-style: solid;\n            border-left-style: solid;\n            border-bottom-width: 1pt;\n            width: 98.2pt;\n            border-top-color: #000000;\n            border-bottom-style: solid\n        }\n\n        .c38 {\n            border-right-style: solid;\n            padding: 0pt 5.4pt 0pt 5.4pt;\n            border-bottom-color: #999999;\n            border-top-width: 1pt;\n            border-right-width: 1pt;\n            border-left-color: #999999;\n            vertical-align: top;\n            border-right-color: #999999;\n            border-left-width: 1pt;\n            border-top-style: solid;\n            border-left-style: solid;\n            border-bottom-width: 1pt;\n            width: 98pt;\n            border-top-color: #999999;\n            border-bottom-style: solid\n        }\n\n        .c27 {\n            border-right-style: solid;\n            padding: 0pt 5.4pt 0pt 5.4pt;\n            border-bottom-color: #999999;\n            border-top-width: 1.5pt;\n            border-right-width: 1pt;\n            border-left-color: #999999;\n            vertical-align: top;\n            border-right-color: #999999;\n            border-left-width: 1pt;\n            border-top-style: solid;\n            border-left-style: solid;\n            border-bottom-width: 1pt;\n            width: 59pt;\n            border-top-color: #666666;\n            border-bottom-style: solid\n        }\n\n        .c29 {\n            border-right-style: solid;\n            padding: 0pt 5.4pt 0pt 5.4pt;\n            border-bottom-color: #999999;\n            border-top-width: 1.5pt;\n            border-right-width: 1pt;\n            border-left-color: #999999;\n            vertical-align: top;\n            border-right-color: #999999;\n            border-left-width: 1pt;\n            border-top-style: solid;\n            border-left-style: solid;\n            border-bottom-width: 1pt;\n            width: 224.3pt;\n            border-top-color: #666666;\n            border-bottom-style: solid\n        }\n\n        .c31 {\n            border-right-style: solid;\n            padding: 5pt 5pt 5pt 5pt;\n            border-bottom-color: #000000;\n            border-top-width: 1pt;\n            border-right-width: 1pt;\n            border-left-color: #000000;\n            vertical-align: top;\n            border-right-color: #000000;\n            border-left-width: 1pt;\n            border-top-style: solid;\n            border-left-style: solid;\n            border-bottom-width: 1pt;\n            width: 71.2pt;\n            border-top-color: #000000;\n            border-bottom-style: solid\n        }\n\n        .c17 {\n            border-right-style: solid;\n            padding: 0pt 5.4pt 0pt 5.4pt;\n            border-bottom-color: #999999;\n            border-top-width: 1.5pt;\n            border-right-width: 1pt;\n            border-left-color: #999999;\n            vertical-align: top;\n            border-right-color: #999999;\n            border-left-width: 1pt;\n            border-top-style: solid;\n            border-left-style: solid;\n            border-bottom-width: 1pt;\n            width: 98pt;\n            border-top-color: #666666;\n            border-bottom-style: solid\n        }\n\n        .c23 {\n            margin-left: 36pt;\n            padding-top: 18pt;\n            text-indent: -36pt;\n            padding-bottom: 18pt;\n            line-height: 1.0;\n            page-break-after: avoid;\n            orphans: 2;\n            widows: 2;\n            text-align: left\n        }\n\n        .c1 {\n            margin-left: 36pt;\n            padding-top: 16pt;\n            text-indent: -36pt;\n            padding-bottom: 16pt;\n            line-height: 1.0;\n            orphans: 2;\n            widows: 2;\n            text-align: left\n        }\n\n        .c26 {\n            margin-left: 36pt;\n            padding-top: 0pt;\n            padding-bottom: 10pt;\n            line-height: 1.1500000000000001;\n            orphans: 2;\n            widows: 2;\n            text-align: left\n        }\n\n        .c35 {\n            color: #f79646;\n            font-weight: 400;\n            text-decoration: none;\n            vertical-align: baseline;\n            font-size: 20pt;\n            font-family: \"Arial\";\n            font-style: normal\n        }\n\n        .c11 {\n            color: #31849b;\n            font-weight: 700;\n            text-decoration: none;\n            vertical-align: baseline;\n            font-size: 14pt;\n            font-family: \"Calibri\";\n            font-style: normal\n        }\n\n        .c7 {\n            color: #000000;\n            font-weight: 400;\n            text-decoration: none;\n            vertical-align: baseline;\n            font-size: 10pt;\n            font-family: \"Calibri\";\n            font-style: normal\n        }\n\n        .c6 {\n            padding-top: 0pt;\n            padding-bottom: 0pt;\n            line-height: 1.0;\n            orphans: 2;\n            widows: 2;\n            text-align: left;\n            height: 10pt\n        }\n\n        .c24 {\n            color: #fac090;\n            font-weight: 700;\n            text-decoration: none;\n            vertical-align: baseline;\n            font-size: 13pt;\n            font-family: \"Calibri\";\n            font-style: normal\n        }\n\n        .c5 {\n            color: #000000;\n            font-weight: 700;\n            text-decoration: none;\n            vertical-align: baseline;\n            font-size: 10pt;\n            font-family: \"Calibri\";\n            font-style: normal\n        }\n\n        .c13 {\n            padding-top: 0pt;\n            padding-bottom: 0pt;\n            line-height: 1.0;\n            orphans: 2;\n            widows: 2;\n            text-align: left\n        }\n\n        .c4 {\n            padding-top: 0pt;\n            padding-bottom: 0pt;\n            line-height: 1.0;\n            orphans: 2;\n            widows: 2;\n            text-align: center\n        }\n\n        .c16 {\n            padding-top: 0pt;\n            padding-bottom: 0pt;\n            line-height: 1.0;\n            text-align: left\n        }\n\n        .c3 {\n            font-size: 9pt;\n            font-family: \"Calibri\";\n            color: #ffffff;\n            font-weight: 400\n        }\n\n        .c28 {\n            padding-top: 0pt;\n            padding-bottom: 0pt;\n            line-height: 1.1500000000000001;\n            text-align: left\n        }\n\n        .c25 {\n            border-spacing: 0;\n            border-collapse: collapse;\n            margin-right: auto\n        }\n\n        .c8 {\n            color: #000000;\n            text-decoration: none;\n            vertical-align: baseline;\n            font-style: normal\n        }\n\n        .c22 {\n            font-weight: 700;\n            font-size: 30pt;\n            font-family: \"Calibri\"\n        }\n\n        .c40 {\n            background-color: #ffffff;\n            max-width: 468pt;\n            padding: 72pt 72pt 72pt 72pt\n        }\n\n        .c20 {\n            font-weight: 700;\n            font-size: 9pt;\n            font-family: \"Quattrocento Sans\"\n        }\n\n        .c15 {\n            font-weight: 400;\n            font-size: 10pt;\n            font-family: \"Arial\"\n        }\n\n        .c0 {\n            font-size: 11pt;\n            font-weight: 400;\n            font-family: \"Calibri\"\n        }\n\n        .c43 {\n            font-weight: 400;\n            font-size: 9pt;\n            font-family: \"Arial\"\n        }\n\n        .c18 {\n            font-weight: 400;\n            font-size: 9pt;\n            font-family: \"Quattrocento Sans\"\n        }\n\n        .c10 {\n            color: #000000;\n            font-size: 9pt\n        }\n\n        .c34 {\n            height: 15pt\n        }\n\n        .c9 {\n            height: 0pt\n        }\n\n        .c12 {\n            height: 10pt\n        }\n\n        .title {\n            padding-top: 24pt;\n            color: #000000;\n            font-weight: 700;\n            font-size: 36pt;\n            padding-bottom: 6pt;\n            font-family: \"Arial\";\n            line-height: 1.0;\n            page-break-after: avoid;\n            orphans: 2;\n            widows: 2;\n            text-align: left\n        }\n\n        .subtitle {\n            padding-top: 18pt;\n            color: #666666;\n            font-size: 24pt;\n            padding-bottom: 4pt;\n            font-family: \"Georgia\";\n            line-height: 1.0;\n            page-break-after: avoid;\n            font-style: italic;\n            orphans: 2;\n            widows: 2;\n            text-align: left\n        }\n\n        li {\n            color: #000000;\n            font-size: 10pt;\n            font-family: \"Arial\"\n        }\n\n        p {\n            margin: 0;\n            color: #000000;\n            font-size: 10pt;\n            font-family: \"Arial\"\n        }\n\n        h1 {\n            padding-top: 16pt;\n            color: #31849b;\n            font-weight: 700;\n            font-size: 14pt;\n            padding-bottom: 16pt;\n            font-family: \"Calibri\";\n            line-height: 1.0;\n            orphans: 2;\n            widows: 2;\n            text-align: left\n        }\n\n        h2 {\n            padding-top: 18pt;\n            color: #fac090;\n            font-weight: 700;\n            font-size: 13pt;\n            padding-bottom: 18pt;\n            font-family: \"Calibri\";\n            line-height: 1.0;\n            page-break-after: avoid;\n            orphans: 2;\n            widows: 2;\n            text-align: left\n        }\n\n        h3 {\n            padding-top: 14pt;\n            color: #7c868d;\n            font-size: 16pt;\n            padding-bottom: 14pt;\n            font-family: \"Arial\";\n            line-height: 1.0;\n            page-break-after: avoid;\n            orphans: 2;\n            widows: 2;\n            text-align: left\n        }\n\n        h4 {\n            padding-top: 14pt;\n            color: #60a0c2;\n            font-size: 14pt;\n            padding-bottom: 14pt;\n            font-family: \"Arial\";\n            line-height: 1.0;\n            page-break-after: avoid;\n            orphans: 2;\n            widows: 2;\n            text-align: left\n        }\n\n        h5 {\n            padding-top: 14pt;\n            color: #7c868d;\n            font-size: 14pt;\n            padding-bottom: 14pt;\n            font-family: \"Arial\";\n            line-height: 0.9;\n            page-break-after: avoid;\n            orphans: 2;\n            widows: 2;\n            text-align: left\n        }\n\n        h6 {\n            padding-top: 14pt;\n            color: #666666;\n            font-size: 14pt;\n            padding-bottom: 14pt;\n            font-family: \"Arial\";\n            line-height: 0.9;\n            page-break-after: avoid;\n            orphans: 2;\n            widows: 2;\n            text-align: left\n        }\n    </style>\n</head>\n\n<body class=\"c40 doc-content\">\n    <div>\n        <p class=\"c6\"><span class=\"c8 c15\"></span></p>\n    </div>\n    <p class=\"c6\"><span class=\"c7\"></span></p>\n    <p class=\"c6\"><span class=\"c8 c22\"></span></p>\n    <p class=\"c6\"><span class=\"c8 c22\"></span></p>\n    <p class=\"c6\"><span class=\"c8 c22\"></span></p>\n    <p class=\"c6\"><span class=\"c8 c22\"></span></p>\n    <p class=\"c4\"><span class=\"c8 c22\">Project Playbook</span></p>\n    <p class=\"c4\"><span class=\"c35\">{{1.ProjectName}}</span></p>\n    <p class=\"c6\"><span class=\"c7\"></span></p>\n    <p class=\"c6\"><span class=\"c7\"></span></p>\n    <hr style=\"page-break-before:always;display:none;\">\n    <p class=\"c13\"><span class=\"c8 c15\">Revision Tracking</span></p>\n    <table class=\"c25\">\n        <tr class=\"c9\">\n            <td class=\"c31\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16\"><span class=\"c5\">Date</span></p>\n            </td>\n            <td class=\"c32\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16\"><span class=\"c5\">Version </span></p>\n            </td>\n            <td class=\"c33\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16\"><span class=\"c5\">Description </span></p>\n            </td>\n            <td class=\"c30\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16\"><span class=\"c5\">Author</span></p>\n            </td>\n            <td class=\"c36\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16\"><span class=\"c5\">Audience</span></p>\n            </td>\n        </tr>\n        <tr class=\"c9\">\n            <td class=\"c31\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16\"><span class=\"c7\">{{1.CreatedDate}}</span></p>\n            </td>\n            <td class=\"c32\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16\"><span class=\"c7\">1.0</span></p>\n            </td>\n            <td class=\"c33\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16\"><span class=\"c7\">Initial Draft</span></p>\n            </td>\n            <td class=\"c30\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16\"><span class=\"c7\">{{1.Owner}}</span></p>\n            </td>\n            <td class=\"c36\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16 c12\"><span class=\"c7\"></span></p>\n            </td>\n        </tr>\n        <tr class=\"c9\">\n            <td class=\"c31\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16 c12\"><span class=\"c7\"></span></p>\n            </td>\n            <td class=\"c32\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16 c12\"><span class=\"c7\"></span></p>\n            </td>\n            <td class=\"c33\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16 c12\"><span class=\"c7\"></span></p>\n            </td>\n            <td class=\"c30\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16 c12\"><span class=\"c7\"></span></p>\n            </td>\n            <td class=\"c36\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16 c12\"><span class=\"c7\"></span></p>\n            </td>\n        </tr>\n    </table>\n    <p class=\"c6\"><span class=\"c7\"></span></p>\n    <p class=\"c1\" id=\"h.jaefr59r6qbx\"><span class=\"c11\">Document Sign Off</span></p>\n    <table class=\"c25\">\n        <tr class=\"c9\">\n            <td class=\"c14\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16\"><span class=\"c5\">Release Date</span></p>\n            </td>\n            <td class=\"c14\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16\"><span class=\"c5\">Version</span></p>\n            </td>\n            <td class=\"c14\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16\"><span class=\"c5\">Review Date</span></p>\n            </td>\n            <td class=\"c14\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16\"><span class=\"c5\">Approval Date</span></p>\n            </td>\n            <td class=\"c14\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16\"><span class=\"c5\">Approved By</span></p>\n            </td>\n        </tr>\n        <tr class=\"c9\">\n            <td class=\"c14\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16 c12\"><span class=\"c7\"></span></p>\n            </td>\n            <td class=\"c14\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16 c12\"><span class=\"c7\"></span></p>\n            </td>\n            <td class=\"c14\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16 c12\"><span class=\"c7\"></span></p>\n            </td>\n            <td class=\"c14\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16 c12\"><span class=\"c7\"></span></p>\n            </td>\n            <td class=\"c14\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c16 c12\"><span class=\"c7\"></span></p>\n            </td>\n        </tr>\n    </table>\n    <p class=\"c6\"><span class=\"c7\"></span></p>\n    <hr style=\"page-break-before:always;display:none;\">\n    <p class=\"c28 c12\"><span class=\"c7\"></span></p>\n    <p class=\"c1\"><span class=\"c11\">1. Project Overview</span></p>\n    <p class=\"c13\"><span class=\"c8 c0\">{{1.ProjectDescription}}</span></p>\n    <p class=\"c6\"><span class=\"c8 c15\"></span></p>\n    <p class=\"c23\"><span class=\"c24\">Project Goals</span></p>\n    <p class=\"c13\"><span class=\"c8 c0\">{{1.Goals}}</span></p>\n    <p class=\"c6\"><span class=\"c8 c0\"></span></p>\n    <p class=\"c23\" id=\"h.exy4wtt24nb4\"><span class=\"c24\">Success Indicators</span></p>\n    <p class=\"c13\"><span class=\"c8 c0\">{{1.SuccessIndicators}}</span></p>\n    <p class=\"c6\"><span class=\"c8 c0\"></span></p>\n    <p class=\"c23\" id=\"h.ygjvn48n3a9w\"><span class=\"c24\">Deliverables</span></p>\n    <p class=\"c13\"><span class=\"c8 c0\">{{1.Deliverables}}</span></p>\n    <p class=\"c6\"><span class=\"c8 c15\"></span></p>\n    <hr style=\"page-break-before:always;display:none;\">\n    <p class=\"c1 c12\"><span class=\"c11\"></span></p>\n    <p class=\"c1\"><span class=\"c11\">2. User Stories</span></p>\n    <p class=\"c6\"><span class=\"c8 c15\"></span></p>\n    <p class=\"c13\"><span class=\"c8 c0\">This component of the Playbook details the specific requirements or user stories\n            gathered during&nbsp;</span></p>\n    <p class=\"c13\"><span class=\"c0 c8\">discovery. We prefer the term user stories in lieu of the word requirements, as\n            we feel that it more&nbsp;</span></p>\n    <p class=\"c13\"><span class=\"c8 c0\">intimately conveys the project deliverables from the perspective of the\n            individual users.&nbsp;&nbsp;</span></p>\n    <p class=\"c13\"><span class=\"c8 c0\">&nbsp;</span></p>\n    <p class=\"c13\"><span class=\"c0\">Our </span><span class=\"c8 c0\">team will collaborate with Ingram to identify and\n            validate these user stories. Once&nbsp;</span></p>\n    <p class=\"c13\"><span class=\"c8 c0\">validation occurs on the user stories and the conceptual overview, the Playbook\n            will be modified as&nbsp;</span></p>\n    <p class=\"c13\"><span class=\"c8 c0\">needed and submitted for approval.&nbsp;&nbsp;</span></p>\n    <p class=\"c6\"><span class=\"c8 c15\"></span></p>\n    <p class=\"c13\"><span class=\"c0\">{{1.UserStories}}</span></p>\n    <p class=\"c23 c12\" id=\"h.orqfgglh8tay\"><span class=\"c24\"></span></p>\n    <p class=\"c6\"><span class=\"c8 c15\"></span></p>\n    <table class=\"c25\">\n        <tr class=\"c34\">\n            <td class=\"c37\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c13\"><span class=\"c3\">#&nbsp;</span></p>\n            </td>\n            <td class=\"c21\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c13\"><span class=\"c3\">Story Title&nbsp;</span></p>\n            </td>\n            <td class=\"c41\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c13\"><span class=\"c3\">Story&nbsp;</span></p>\n            </td>\n            <td class=\"c47\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c13\"><span class=\"c3\">Date&nbsp;</span></p>\n            </td>\n            <td class=\"c19\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c13\"><span class=\"c3\">Scope Status&nbsp;</span></p>\n            </td>\n        </tr>\n        <tr class=\"c34\">\n            <td class=\"c2\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c6\"><span class=\"c8 c20\"></span></p>\n            </td>\n            <td class=\"c17\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c13\"><span class=\"c8 c18\">Story Name</span></p>\n            </td>\n            <td class=\"c29\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c13\"><span class=\"c8 c18\">Description</span></p>\n            </td>\n            <td class=\"c42\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c13\"><span class=\"c8 c18\">Created Date</span></p>\n            </td>\n            <td class=\"c27\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c6\"><span class=\"c8 c18\"></span></p>\n            </td>\n        </tr>\n        <tr class=\"c34\">\n            <td class=\"c45\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c6\"><span class=\"c8 c20\"></span></p>\n            </td>\n            <td class=\"c38\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c6\"><span class=\"c8 c18\"></span></p>\n            </td>\n            <td class=\"c44\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c6\"><span class=\"c8 c18\"></span></p>\n            </td>\n            <td class=\"c39\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c6\"><span class=\"c8 c18\"></span></p>\n            </td>\n            <td class=\"c46\" colspan=\"1\" rowspan=\"1\">\n                <p class=\"c6\"><span class=\"c8 c18\"></span></p>\n            </td>\n        </tr>\n    </table>\n    <p class=\"c12 c28\"><span class=\"c8 c0\"></span></p>\n    <hr style=\"page-break-before:always;display:none;\">\n    <p class=\"c1 c12\" id=\"h.vv9ycryt45gy\"><span class=\"c11\"></span></p>\n    <p class=\"c1\" id=\"h.mib5pkjax65d\"><span class=\"c11\">3. Conceptual Design</span></p>\n    <p class=\"c6\"><span class=\"c8 c15\"></span></p>\n    <hr style=\"page-break-before:always;display:none;\">\n    <p class=\"c6\"><span class=\"c11\"></span></p>\n    <p class=\"c1\"><span class=\"c11\">4. Configuration Details</span></p>\n    <p class=\"c6\"><span class=\"c8 c15\"></span></p>\n    <p class=\"c12 c26\"><span class=\"c7\"></span></p>\n    <div>\n        <p class=\"c13\"><span class=\"c10\">Confidential. Do Not\n                Distribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span\n                style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 626.00px; height: 3.33px;\"><img\n                    alt=\"\" src=\"images/image1.png\"\n                    style=\"width: 626.00px; height: 3.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\"\n                    title=\"\"></span></p>\n        <p class=\"c13\"><span class=\"c10\">Page </span><span class=\"c10\">&nbsp;of </span></p>\n    </div>\n</body>\n\n</html>",
+                "folderId": "/",
+                "destination": "drive"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "folderId": {
+                            "mode": "chose",
+                            "path": [
+                                "/"
+                            ]
+                        },
+                        "destination": {
+                            "label": "My Drive"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            },
+                            "label": "My Google connection (psapir@exthq.com)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "label": "Name",
+                        "required": true
+                    },
+                    {
+                        "name": "content",
+                        "type": "text",
+                        "label": "Content",
+                        "required": true
+                    },
+                    {
+                        "name": "destination",
+                        "type": "select",
+                        "label": "Choose a Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "header",
+                        "type": "boolean",
+                        "label": "Insert a Header",
+                        "required": true
+                    },
+                    {
+                        "name": "footer",
+                        "type": "boolean",
+                        "label": "Insert a Footer",
+                        "required": true
+                    },
+                    {
+                        "name": "folderId",
+                        "type": "folder",
+                        "label": "New Document's Location",
+                        "required": true
+                    }
+                ],
+                "advanced": true
+            }
+        },
+        {
+            "id": 5,
+            "module": "gateway:WebhookRespond",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "body": "{\"link\":\"{{4.webViewLink}}\"}",
+                "status": "200",
+                "headers": []
+            },
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "headers": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "status",
+                        "type": "uinteger",
+                        "label": "Status",
+                        "required": true,
+                        "validate": {
+                            "min": 100
+                        }
+                    },
+                    {
+                        "name": "body",
+                        "type": "any",
+                        "label": "Body"
+                    },
+                    {
+                        "name": "headers",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key",
+                                "required": true,
+                                "validate": {
+                                    "max": 256
+                                }
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value",
+                                "required": true,
+                                "validate": {
+                                    "max": 4096
+                                }
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Custom headers",
+                        "validate": {
+                            "maxItems": 16
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": true,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "us2.make.com",
+        "notes": []
+    }
+}
