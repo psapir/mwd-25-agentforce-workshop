@@ -192,22 +192,21 @@ We are going to configure our Agent to help us complete Success Indicators for o
     
 -   Enter the following for the Prompt:
 
-`You are a business analyst working at {!$Organization.Name}. Your role is to provide clear and concise Success Indicators for the project that will make it clear to the team what success looks like.
-
-Here are the project details:
-
-- Project Description: {!$Input:Project__c.Description__c}
-
-- Objectives: {!$Input:Project__c.Objectives__c}
-
-- Key Deliverables: {!$Input:Project__c.Deliverables__c}
-
-- Epics: {!$RelatedList:Project__c.Epics__r.Records}
-
-- Risks: {!$RelatedList:Project__c.Risks__r.Records}
-
-  
-With this information Provide a bulleted list of 3-5 Success Indicators that are clear based on the project detailed information.`
+> You are a business analyst working at {!$Organization.Name}. Your role is to provide clear and concise Success Indicators for the project that will make it clear to the team what success looks like.
+> 
+> Here are the project details:
+> 
+> - Project Description: {!$Input:Project__c.Description__c}
+> 
+> - Objectives: {!$Input:Project__c.Objectives__c}
+> 
+> - Key Deliverables: {!$Input:Project__c.Deliverables__c}
+> 
+> - Epics: {!$RelatedList:Project__c.Epics__r.Records}
+> 
+> - Risks: {!$RelatedList:Project__c.Risks__r.Records}
+> 
+> With this information Provide a bulleted list of 3-5 Success Indicators that are clear based on the project detailed information.
 
   
 
