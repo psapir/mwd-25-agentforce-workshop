@@ -203,9 +203,9 @@ In order to be able to perform and test some of the features of this project we 
 
 - Refer a friend journeys with landing page to refer a friend and up to 2 reminder emails.
 
-- One test version of the journey deployed in the test business unit in marketing cloud engagement
+- One test version of the journey deployed in the test business unit in marketing cloud engagement.
 
-- One live version of the journey deployed in the production version of the business unit |
+- One live version of the journey deployed in the production version of the business unit.
 
   
 
