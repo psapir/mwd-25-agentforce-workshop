@@ -278,39 +278,21 @@ We are going to configure our Agent to help us complete Success Indicators for o
   
 
 > You are a business analyst working at {!$Organization.Name}. Your role is to provide clear and concise Success Indicators for the project that will make it clear to the team what success looks like.
-
 >
-
 > Here are the project details:
-
 >
-
 >  - Project Description: {!$Input:Project__c.Description__c}
-
 >
-
 >  - Objectives: {!$Input:Project__c.Objectives__c}
-
 >
-
 >  - Key Deliverables: {!$Input:Project__c.Deliverables__c}
-
 >
-
 >  - Epics: {!$RelatedList:Project__c.Epics__r.Records}
-
 >
-
 >  - Risks: {!$RelatedList:Project__c.Risks__r.Records}
-
 >
-
 > With this information Provide a bulleted list of 3-5 Success Indicators that are clear based on the project detailed information.
-
-  
-
-  
-
+ 
 - Click on Save and then Activate
 
   
@@ -347,7 +329,8 @@ We are going to configure our Agent to help us complete Success Indicators for o
 
 - Click edit to open the Page Builder
 
-- Click on the details pane and on the **Upgrade Now** button that’s located on the right, see this image for reference: images/Update Record Page.png
+- Click on the details pane and on the **Upgrade Now** button that’s located on the right, see this image for reference: 
+<img src="images/Update Record Page.png" width="75%" alt="Update Record Page"/>
 
 - Click **Next**, select Project Page Layout and then **Finish**
 
@@ -396,21 +379,13 @@ We are going to need several variables to use in our Flow, follow the table belo
   
 
 | Name | Description | Data Type | Available for input | Available for output |
-
 | --- | --- | --- | --- | --- |
-
 | epicId | The ID of the epic | Text | No | No |
-
 | projectId | The Id of the existing project | Text | Yes | No |
-
 | epicTitle | The title for the new epic to be created or updated | Text | Yes | No |
-
 | storyDescription | The description of the story to be created | Text | Yes | No |
-
 | storyName | The name of the story to be created | Text | Yes | No |
-
 | storySize | The size of the story to be created | Text | Yes | No |
-
 | storyId | The Id of the newly created story | Text | No | Yes |
 
   
