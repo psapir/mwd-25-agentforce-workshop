@@ -45,7 +45,7 @@ To complete this workshop you will need:
 
   
 
-## Level 1 - Setup (10 minutes)
+## Level 1 - Setup (15 minutes)
 
   
 
