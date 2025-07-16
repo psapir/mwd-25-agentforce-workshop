@@ -149,7 +149,7 @@ Our Agent is going to take care of creating our project documentation for us. Fo
 
   
 
-![Mock API](images/mockapi-1.png)
+<img alt="Mock API" src="images/mockapi-1.png" style="border: 1px solid #cccccc" width="75%"/>
 
   
 
@@ -330,11 +330,13 @@ We are going to configure our Agent to help us complete Success Indicators for o
 - Click edit to open the Page Builder
 
 - Click on the details pane and on the **Upgrade Now** button that’s located on the right, see this image for reference: 
-<img src="images/Update Record Page.png" width="75%" alt="Update Record Page"/>
+<img src="images/Update Record Page.png" alt="Update Record Page" style="border: 1px solid #cccccc"/>
 
 - Click **Next**, select Project Page Layout and then **Finish**
 
-- Once updated, select the Success Indicators field and on the right hand side panel you will be able to find and choose our newly created field generation template! See image below for reference: images/Update Record Page - Prompt Template.png
+- Once updated, select the Success Indicators field and on the right hand side panel you will be able to find and choose our newly created field generation template! See image below for reference: 
+
+<img src="images/Update Record Page - Prompt Template.png" alt="Update Record Page - Prompt Template" style="border: 1px solid #cccccc"/>
 
 - Click Save, you can exit for now, we will test our Field Generation Prompt Template later
 
@@ -402,7 +404,7 @@ Here’s an image of the Flow you will recreate:
 
   
 
-![Briefly - Create Story - Flow](images/Briefly%20-%20Create%20Story%20-%20Flow.png)
+<img alt="Briefly - Create Story - Flow" src="images/Briefly%20-%20Create%20Story%20-%20Flow.png"  style="border: 1px solid #cccccc" width="75%"/>
 
   
 
@@ -426,7 +428,7 @@ Add the following elements to your flow and copy the screenshots for configurati
 
   
 
-![Briefly - Create Story - Flow](images/Briefly%20-%20Create%20Story%20-%20Flow%20-%201.png)
+<img alt="Briefly - Create Story - Flow" src="images/Briefly%20-%20Create%20Story%20-%20Flow%20-%201.png"  style="border: 1px solid #cccccc" width="75%"/>
 
   
 
@@ -450,7 +452,7 @@ Add the following elements to your flow and copy the screenshots for configurati
 
   
 
-![Briefly - Create Story - Flow](images/Briefly%20-%20Create%20Story%20-%20Flow%20-%203.png)
+<img alt="Briefly - Create Story - Flow" src="images/Briefly%20-%20Create%20Story%20-%20Flow%20-%203.png"  style="border: 1px solid #cccccc" width="75%"/>
 
   
 
@@ -462,7 +464,7 @@ Add the following elements to your flow and copy the screenshots for configurati
 
   
 
-![Briefly - Create Story - Flow](images/Briefly%20-%20Create%20Story%20-%20Flow%20-%204.png)
+<img alt="Briefly - Create Story - Flow" src="images/Briefly%20-%20Create%20Story%20-%20Flow%20-%204.png"  style="border: 1px solid #cccccc" width="75%"/>
 
   
 
@@ -474,7 +476,7 @@ Add the following elements to your flow and copy the screenshots for configurati
 
   
 
-![Briefly - Create Story - Flow](images/Briefly%20-%20Create%20Story%20-%20Flow%20-%205.png)
+<img alt="Briefly - Create Story - Flow" src="images/Briefly%20-%20Create%20Story%20-%20Flow%20-%205.png"  style="border: 1px solid #cccccc" width="75%"/>
 
   
 
@@ -486,7 +488,7 @@ Add the following elements to your flow and copy the screenshots for configurati
 
   
 
-![Briefly - Create Story - Flow](images/Briefly%20-%20Create%20Story%20-%20Flow%20-%206.png)
+<img alt="Briefly - Create Story - Flow" src="images/Briefly%20-%20Create%20Story%20-%20Flow%20-%206.png"  style="border: 1px solid #cccccc" width="75%"/>
 
   
 
@@ -498,7 +500,7 @@ Add the following elements to your flow and copy the screenshots for configurati
 
   
 
-![Briefly - Create Story - Flow](images/Briefly%20-%20Create%20Story%20-%20Flow%20-%207.png)
+<img alt="Briefly - Create Story - Flow" src="images/Briefly%20-%20Create%20Story%20-%20Flow%20-%207.png"  style="border: 1px solid #cccccc" width="75%"/>
 
   
 
@@ -562,7 +564,7 @@ For this we will need to connect to a third party service so we will create an A
 
   
 
-## Final Level - Putting it all together!
+## Final Level - Putting it all together! (15 minutes)
 
   
 
