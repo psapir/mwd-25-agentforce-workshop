@@ -463,7 +463,7 @@ Add the following elements to your flow and copy the screenshots for configurati
 
   
 
-![Briefly - Create Story - Flow](images/Briefly%20-%20Create%20Story%20-%20Flow%20-%202.png)
+<img alt="Briefly - Create Story - Flow" src="images/Briefly%20-%20Create%20Story%20-%20Flow%20-%202.png" width="75%"/>
 
   
 
@@ -676,7 +676,7 @@ Now that we have all the components for our project helper Agent we are going to
 
   
 
-Step 3 - Adding custom actions to our Topic
+### Step 3 - Adding custom actions to our Topic
 
   
 
@@ -688,57 +688,53 @@ Now that we have the foundation of our Topic we need to add the two custom actio
 
   
 
-- First, let’s go ahead and remove the General CRM and Single Record Summary Topics by click on the arrow next to them and then Remove from Agent
+- First, let’s go ahead and remove the General CRM and Single Record Summary Topics by click on the arrow next to them and then *Remove from Agent*
 
 - Now click on your newly created Topic
 
-- Click on the This Topic’s Actions tab
+- Click on the *This Topic’s Actions* tab
 
 - Click New - Create New Action
 
-- For Reference Action Type select Flow
+- For *Reference Action Type* select Flow
 
 - For Reference Action select: Briefly - Create Story
 
-- Click Next
+- Click *Next*
 
 - For loading text enter anything to your liking for example: Creating stories…
 
-- Click Finish
+- Click *Finish*
 
 - Add another Action this time the Reference Action Type will be Apex and the Reference Action will be Invocable Method
 
-- Select Generate_Project_Documentation
+- Select *Generate_Project_Documentation*
 
-- Click Next
+- Click *Next*
 
 - For loading text enter anything to your liking for example: Generating documentation…
 
 - Make sure all the instructions fields are completed for each input and output:
 
-  
+	- ProjectIds: The ID of the project
 
-- ProjectIds: The ID of the project
+	- linkURL: The URL of the generated documentation.
 
-- linkURL: The URL of the generated documentation.
+	- projectId: The ID of the project for which documentation was generated.
 
-- projectId: The ID of the project for which documentation was generated.
+	- Response: The response from the HTTP POST request.
 
-- Response: The response from the HTTP POST request.
+- Make sure that the linkURL field’s checkbox for *Show in conversation* is checked
 
-  
+- Make sure that the projectIds field’s checkbox for *Require input* is checked
 
-- Make sure that the linkURL field’s checkbox for Show in conversation is checked
-
-- Make sure that the projectIds field’s checkbox for Require input is checked
-
-- Click Finish
+- Click *Finish*
 
   
 
   
 
-Step 4 - Testing and activating the Agent!
+### Step 4 - Testing and activating the Agent!
 
   
 
@@ -762,7 +758,7 @@ Lastly, if you ask the Agent to generate documentation for your project you will
 
   
 
-Once you are satisfied with the results, you can click on Activate to activate your Agent!
+Once you are satisfied with the results, you can click on *Activate* to activate your Agent!
 
   
 
@@ -780,7 +776,7 @@ Lastly, try the Field Generation Prompt Template we created in Level 3 by naviga
 
   
 
-# BONUS LEVEL - Create the project documentation using Make
+## BONUS LEVEL - Create the project documentation using Make
 
   
 
@@ -802,37 +798,45 @@ Because they offer a Free tier and it's easy to set up, we will use it for our w
 
 - Sign up for a new account and answer a few questions
 
-- Once in the home screen, navigate to Scenarios on the left hand side and click on New Scenario
+- Once in the home screen, navigate to *Scenarios* on the left hand side and click on *New Scenario*
 
-- At the bottom of the screen you will see three dots, click then and choose Import Blueprint
+- At the bottom of the screen you will see three dots, click then and choose *Import Blueprint*
 
 - Upload the JSON file located here /make/Integration Webhooks, Google Docs.blueprint.json, this has a template I’ve created to create the documentation
 
-- Click Save
+- Click *Save*
 
-- Click on the Google Docs element and connect your Google Account, remember this is the account where your documents will be stored.
+- Click on the *Google Docs* element and connect your Google Account, remember this is the account where your documents will be stored.
 
 - Click on the first Webhook element
 
-- Click on Create Webhook
+- Click on *Create Webhook*
 
-- Click on Copy Address to Clipboard and store this address somewhere
+- Click on *Copy Address to Clipboard* and store this address somewhere
 
-- Click on Save
+- Click on *Save*
 
 - Click on the Save icon at the bottom of the Screen.
 
-- Go back to the main Scenarios screen.
+- Go back to the main *Scenarios* screen.
 
 - Click on the checkbox next to the scenario to turn it on and start receiving calls!
 
-- Going back to Salesforce, open the Developer Console by clicking on the Gear on the top far right and then clicking on Developer Console
+- Going back to Salesforce, open the *Developer Console* by clicking on the Gear on the top far right and then clicking on Developer Console
 
 - Open the class you created in Level 4 BrieflyDocumentationGenerator
 
 - Replace the URL located in line 95 of the class with the URL that you got from Make.
 
 - Save your class and close the developer console.
+
+- Go to Setup and search for **Remote Site Settings** in the Quick Find bar
+
+- Click **New Remote Site**
+
+- Name your site make
+
+- Enter the copied URL in the Remote Site URL field and click on Save.
 
 - Test your Agent and ask it to generate the documentation for your project, you should now see a Google doc with documentation in your Google Drive!
 
