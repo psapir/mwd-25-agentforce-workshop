@@ -208,8 +208,7 @@ In order to be able to perform and test some of the features of this project we 
 - One live version of the journey deployed in the production version of the business unit.
 
   
-
-**Epics and Stories**:
+Click **Save** and add some Epics and Stories:
 
   
 
