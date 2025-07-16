@@ -39,9 +39,9 @@ To complete this workshop you will need:
 
   
 
-- A Free Make account
+	- A Free Make account
 
-- A Google Account
+	- A Google Account
 
   
 
@@ -73,7 +73,9 @@ If you don’t have an org with Agentforce, sign up for one here: [https://www.s
 
   
 
-Visit the following URL and install the Briefly App to all users: [https://login.salesforce.com/packaging/installPackage.apexp?p0=04tfL000000K1xd&isdtp=p1](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tfL000000K1xd&isdtp=p1)
+Visit the following URL and install the Briefly App to all users: [https://login.salesforce.com/packaging/installPackage.apexp?p0=04tfL000000K1xd&isdtp=p1](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tfL000000K1xd&isdtp=p1).
+
+
 
   
 
@@ -153,7 +155,7 @@ Our Agent is going to take care of creating our project documentation for us. Fo
 
   
 
-- Name your resource **createdoc**
+- Name your resource **createdoc** and click **Create**
 
 - Copy the URL of your mock api resource, you will need this for Level 5!
 
